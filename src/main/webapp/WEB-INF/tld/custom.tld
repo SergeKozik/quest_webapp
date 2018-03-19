@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0">
+
+<tlib-version>1.0</tlib-version>
+    <short-name>kozik</short-name>
+    <uri>customtags</uri>
+
+    <tag>
+        <name>user</name>
+        <tag-class>by.kozik.quest.tag.RoleTagUser</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>authorized</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>author</name>
+        <tag-class>by.kozik.quest.tag.RoleTagAuthor</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>authorized</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>admin</name>
+        <tag-class>by.kozik.quest.tag.RoleTagAdmin</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>authorized</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>answer-case</name>
+        <tag-class>by.kozik.quest.tag.AnswerCaseTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>answer</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>by.kozik.quest.entity.AnswerVariantBasic</type>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>answer-text</name>
+        <tag-class>by.kozik.quest.tag.AnswerTextTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>answer</name>
+            <rtexprvalue>true</rtexprvalue>
+            <type>by.kozik.quest.entity.AnswerVariantBasic</type>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>name</name>
+        <tag-class>by.kozik.quest.tag.UserTagName</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+
+    <tag>
+        <name>rolename</name>
+        <tag-class>by.kozik.quest.tag.UserTagRoleString</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>code</name>
+            <rtexprvalue>true</rtexprvalue>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+</taglib>

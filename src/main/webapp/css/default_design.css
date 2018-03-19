@@ -1,0 +1,362 @@
+﻿@font-face {
+    font-family: FixSysC;
+    src: url(../font/FixSysC_Normal.ttf);         
+    font-weight: normal;
+    font-style: normal;
+} 
+@font-face {
+    font-family: Bip;
+    src: url(../font/BIP.ttf);         
+    font-weight: normal;
+    font-style: normal;
+}           
+.wrapper {
+    font-family: Helvetica, Arial, Geneva, sans-serif;
+    height: 100%;
+    display: table;
+    border-spacing: 2px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    min-width:300px;
+    font-size: 14pt;
+}
+.header {
+    display: table-row;
+    height: 0px;
+    font-family: Bip;
+    color: white;
+    font-size: 26pt;
+    font-weight: bold;
+    background: #94D394;
+    background-image: url(../img/fon_header.jpg);
+    width: 100%;
+    animation: fon_1 40s linear infinite;
+    -webkit-animation: fon_1 60s linear infinite;
+
+}
+@keyframes fon_1 {
+    from { background-position: 0px 100%;}
+    to { background-position: 2467px 100%; }
+}
+.headmenu-wrapper {
+    font-family: Helvetica, Arial, Geneva, sans-serif;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 14pt;
+    font-weight: normal;
+    text-align: center;
+    display:inline-block;
+    background: #4CA84C;
+    color: white;
+    float:right;
+    position:relative;
+}
+.headmenu-wrapper > a {
+    margin-left: 5px;
+}
+.headmenu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display:none;
+    position:absolute;
+    top: 25px;
+    right:0;
+    width: auto;
+}
+.headmenu a {
+    color: #196D19;
+}
+.headmenu li {
+    margin-bottom: -1px;
+    padding: 8px 14px;
+    background: #7DD37D;
+    display: inline-block;
+}
+.lang-image {
+    display:inline;
+}
+.headmenu-wrapper:hover .headmenu {
+    display:block;
+}
+
+.main-menu {
+    width:100%;
+    padding: 0;
+    margin: 0;
+    height: 1px;
+    list-style: none;
+    display: table-row;
+    text-align:center;
+    background: #CBE19D;
+}
+
+.mainnav-wrapper {
+    display:inline-block;
+    position:relative;
+}
+
+.mainnav-submenu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display:none;
+    position:absolute;
+    top: 20px;
+    right:0;
+    width: auto;
+}
+
+.mainnav-wrapper:hover .mainnav-submenu {
+    display:block;
+}
+
+.mainnav-submenu li {
+    background: #CBE19D;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 10px;
+
+}
+nav li a {
+    color: #5E7F1D;
+}
+
+.main {
+    height: 100%;
+    display: table;
+    width: 100%;
+    padding: 0;
+}
+
+.box {
+    display: table-cell;
+    padding: 0px;
+    text-align: left;
+    vertical-align:top;
+}
+.sidebar {
+    width: 200px;
+    padding: 0px;
+    background: #CBE19D;
+}
+.left-menu {
+    display:block;
+    width:100%;
+    padding: 0;
+    margin: 2px;
+    list-style: none;
+}
+.left-menu a {
+    display:block;
+    margin-bottom: -1px;
+    padding: 8px 14px;
+    text-decoration: none;
+    background: #397E7E;
+    color: white;
+
+}
+.left-menu a:hover {
+    background: #70BEBE;
+}
+.left-menu > li {
+    position: relative;
+}
+.left-menu .left-submenu {
+    position: absolute;
+    top: 5px;
+    left: 200px;
+    z-index: 10;
+    display: none;
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    background: #fcf8e3;
+    border: solid 1px #135252
+}
+.left-menu > li:hover .left-submenu {
+    display: block;
+}
+.content {
+    font-size: 12pt;
+    padding: 0px;
+}
+.content .quest-card {
+    display: inline-block;
+    border: solid 1px #196D19;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+}
+.content .quest-card > div {
+    display:block;
+    padding: 5px;
+    background: #94D394;
+    color: #196D19;
+}
+.content .quest-card table {
+    font-family: FixSysC;
+    margin: 0px;
+    cellspacing: 5px;
+}
+.content .quest-card td {
+    text-align: right;
+}
+.content .quest-card td ~ td {
+    text-align: left;
+}
+.footer {
+    display: table-row;
+    background: #CBE19D;
+    width: 100%;
+    height: 1px;
+}
+
+.login-form{
+    display: inline-block;
+    text-align: center;
+}
+
+.custom-error {
+    color: red;
+    display: block;
+    text-align: center;
+}
+
+.login-form input {
+    position: relative;
+    width: 150px;
+    z-index: 1;
+}
+
+.login-form input:required:valid {
+    border: solid 2px green;
+}
+
+.login-form input:required:invalid {
+    border: solid 2px red;
+}
+
+.login-form table tr td {
+    position: relative;
+}
+
+.hint {
+    background: lightyellow;
+    color: gray;
+    display: none;
+    font-size: 14px;
+    padding: 3px;
+    position: absolute;
+    right: -160px;
+    text-align: center;
+    top: 0;
+    width: 150px;
+    z-index: 2;
+}
+
+input:focus ~ .hint {
+    display: block;
+}
+textarea:hover ~ .hint {
+    display: block;
+}
+
+.quest-list {
+    display: table-cell;
+}
+
+.quest-menu-block {
+    display: table-cell;
+    width: 200px;
+}
+
+.answer-multiple {
+    display:block;
+}
+.answer-text {
+    display: none;
+}
+#answer_multiple:checked ~ .answer-multiple{
+    display: block;
+}
+#answer_text:checked ~ .answer-text {
+    display: block;
+}
+.user-answer-create {
+    width: 200px;
+}
+
+.quest-create-form input[type=text] {
+    width: 150px;
+}
+
+.button-answer + label {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    background: white;
+    color: #196D19;
+    border: solid 2px #196D19;
+}
+
+.button-quest {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    background: white;
+    color: #196D19;
+    border: solid 2px #196D19;
+}
+
+.button-start {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    background: white;
+    color: #196D19;
+    border: solid 2px #196D19;
+}
+
+.button-answer {
+    display: none;
+}
+
+.button-answer-js {
+    padding: 2px 10px;
+    border-radius: 4px;
+    color: white;
+    background: blue;
+}
+
+.del {
+    background: brown;
+}
+
+.finish-button-check {
+    display: none;
+}
+
+.finish-button-check + label {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    background: white;
+    color: #196D19;
+    border: solid 2px #196D19;
+}
+
+.scroll-users {
+    height: 300px;
+    overflow: auto;
+}

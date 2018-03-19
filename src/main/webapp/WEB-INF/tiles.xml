@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="main.page" template="/WEB-INF/pages/container.jsp">
+        <put-attribute name="include" value="/WEB-INF/pages/blocks/include.jsp"/>
+        <put-attribute name="header" value="header-block"/>
+        <put-attribute name="main-menu" value="/WEB-INF/pages/blocks/main_menu.jsp"/>
+        <put-attribute name="side-bar" value="/WEB-INF/pages/blocks/menu_left.jsp"/>
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/main_content.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/pages/blocks/footer.jsp"/>
+    </definition>
+
+    <definition name="header-block" template="/WEB-INF/pages/blocks/header.jsp">
+        <put-attribute name="login-menu" value="/WEB-INF/pages/blocks/login_menu.jsp"/>
+        <put-attribute name="lang-menu" value="/WEB-INF/pages/blocks/lang_menu.jsp"/>
+    </definition>
+
+    <definition name="login.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/login.jsp"/>
+    </definition>
+
+    <definition name="register.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/register.jsp"/>
+    </definition>
+
+    <definition name="quest-list.page" extends="main.page">
+        <put-attribute name="side-bar" value="/WEB-INF/pages/blocks/quest_list_menu.jsp"/>
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/quest_list.jsp"/>
+    </definition>
+
+    <definition name="users-view.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/admin_users.jsp"/>
+    </definition>
+
+    <definition name="quest-title-create.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/quest_title_create.jsp"/>
+    </definition>
+
+    <definition name="question-vote.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/question_vote_create.jsp"/>
+    </definition>
+
+    <definition name="question-mark.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/question_mark_create.jsp"/>
+    </definition>
+
+    <definition name="question-nomark.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/question_nomark_create.jsp"/>
+    </definition>
+
+    <definition name="quest-save.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/quest_before_save.jsp"/>
+    </definition>
+
+    <definition name="quest-before-start.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/quest_before_start.jsp"/>
+    </definition>
+
+    <definition name="quest-next-question.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/question_ask.jsp"/>
+    </definition>
+
+    <definition name="quest-finish-voting.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/quest_finish_voting.jsp"/>
+    </definition>
+
+    <definition name="quest-finish-mark.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/quest_finish_test.jsp"/>
+    </definition>
+
+    <definition name="quest-finish-nomark.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/quest_finish_questionnaire.jsp"/>
+    </definition>
+
+    <definition name="custom_exception.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/custom_error.jsp"/>
+    </definition>
+
+    <definition name="author-quest-statistics.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/author_quest_statistics.jsp"/>
+    </definition>
+
+    <definition name="quest-statistics.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/quest_statistics.jsp"/>
+    </definition>
+
+    <definition name="user-quest-statistics.page"  extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/user_quest_statistics.jsp"/>
+    </definition>
+
+    <definition name="custom_report.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/custom_report.jsp"/>
+    </definition>
+
+    <definition name="custom_confirm.page" extends="main.page">
+        <put-attribute name="main-content" value="/WEB-INF/pages/blocks/custom_confirm.jsp"/>
+    </definition>
+</tiles-definitions>
